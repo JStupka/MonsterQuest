@@ -117,10 +117,6 @@ void close()//schliesst Fenster
 
 // prueft, dass Character nicht ueber Hindernisse laeuft
 pair<bool,Monster> inGrenzen(int x,int y, Spieler spieler){//ueberprueft, ob Bewegung zulaessig und ob man einem Monster begegnet
-	SYSTEMTIME time;//Seed fuer Zufallsgenerator
-	GetSystemTime(&time);
-	LONG time_ms = (time.wSecond * 1000) + time.wMilliseconds;
-	srand(time_ms);
     if (((x>=0) & (x<=310)) & ((y>=0) & (y<=310))) {// innerhalb bildschirm
         if ((x<213) || (y>=20)){// nicht oben rechts
             if (((x>=280) & (y<255)) || (y<80)){// nicht im Wasser/Electro/Gras Bereich
