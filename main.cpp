@@ -12,6 +12,7 @@ bool schleife = true; //Fuer Schleife
 
 int main(int a, char **b){
 
+	srand(time(NULL));
 	individuum nullmon(none,1);//erstellt Plazhaltermonster
 	nullmon.health=0;
 	Spieler spieler("Name", nullmon, nullmon, nullmon, false, 5, 5);
